@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="519.0" prefWidth="959.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UWE.MainViewController">
+    <children>
+        <TableView fx:id="MainView" prefHeight="350.0" prefWidth="959.0">
+            <columns>
+                <TableColumn fx:id="hallNumberCol" minWidth="120.0" prefWidth="75.0" text="Hall No." />
+                <TableColumn fx:id="roomNumberCol" minWidth="120.0" prefWidth="75.0" text="Room No." />
+                <TableColumn fx:id="forenameCol" minWidth="120.0" prefWidth="75.0" text="Forename" />
+                <TableColumn fx:id="surnameCol" minWidth="120.0" prefWidth="75.0" text="Surname" />
+                <TableColumn fx:id="studentNumCol" minWidth="120.0" prefWidth="75.0" text="Student ID" />
+                <TableColumn fx:id="leaseNumberCol" minWidth="120.0" prefWidth="75.0" text="Lease Number" />
+                <TableColumn fx:id="cleaningStatusCol" minWidth="120.0" prefWidth="75.0" text="Cleaning Status" />
+                <TableColumn fx:id="roomStatusCol" minWidth="120.0" prefWidth="75.0" text="Room Status" />
+            </columns>
+        </TableView>
+        <ChoiceBox fx:id="cleaningStatusBox" layoutX="436.0" layoutY="372.0" prefHeight="27.0" prefWidth="161.0" />
+        <Button layoutX="811.0" layoutY="415.0" mnemonicParsing="false" onAction="#logoutEvent" prefHeight="82.0" prefWidth="108.0" text="Logout" />
+        <TextField fx:id="hallNumberBox" editable="false" layoutX="17.0" layoutY="375.0" prefHeight="27.0" prefWidth="192.0">
+            <cursor>
+                <Cursor fx:constant="DISAPPEAR" />
+            </cursor></TextField>
+        <Label layoutX="17.0" layoutY="358.0" text="Hall No." />
+        <TextField fx:id="roomNumberBox" editable="false" layoutX="226.0" layoutY="375.0" prefHeight="27.0" prefWidth="192.0">
+            <cursor>
+                <Cursor fx:constant="DISAPPEAR" />
+            </cursor></TextField>
+        <Label layoutX="227.0" layoutY="358.0" text="Room No." />
+        <TextField fx:id="studentIdBox" layoutX="436.0" layoutY="466.0" prefHeight="27.0" prefWidth="192.0" />
+        <Label layoutX="435.0" layoutY="449.0" text="Student ID" />
+        <TextField fx:id="forenameBox" layoutX="17.0" layoutY="466.0" prefHeight="27.0" prefWidth="192.0" />
+        <Label layoutX="18.0" layoutY="449.0" text="Student Forename" />
+        <TextField fx:id="leaseNumberBox" layoutX="17.0" layoutY="419.0" prefHeight="27.0" prefWidth="192.0" />
+        <Label layoutX="17.0" layoutY="402.0" text="Lease Number" />
+        <TextField fx:id="roomStatusBox" editable="false" layoutX="226.0" layoutY="419.0" prefHeight="27.0" prefWidth="192.0" />
+        <Label layoutX="227.0" layoutY="402.0" text="Room Status" />
+        <Label layoutX="435.0" layoutY="355.0" text="Cleaning Status" />
+        <Button layoutX="667.0" layoutY="415.0" mnemonicParsing="false" onAction="#update" prefHeight="35.0" prefWidth="108.0" text="Update" />
+        <TextField fx:id="searchBox" layoutX="667.0" layoutY="375.0" onAction="#searchRecord" onKeyTyped="#searchRecord" prefHeight="27.0" prefWidth="255.0" />
+        <Label layoutX="667.0" layoutY="358.0" text="Search" />
+        <TextField fx:id="surnameBox" layoutX="226.0" layoutY="466.0" prefHeight="27.0" prefWidth="192.0" />
+        <Label layoutX="226.0" layoutY="449.0" text="Student Surname" />
+        <Button fx:id="deleteButton" layoutX="667.0" layoutY="462.0" mnemonicParsing="false" onAction="#delete" prefHeight="35.0" prefWidth="108.0" text="Delete" />
+    </children>
+</AnchorPane>
